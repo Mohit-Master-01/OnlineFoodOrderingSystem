@@ -1,0 +1,143 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\ul\b\f0\fs56\lang9 PHP ASSIGNMENTS\par
+\par
+
+\pard\sa200\sl276\slmult1\ulnone\b0\fs22 Assignment - 1\par
+AIM : Learn to deal with echo/print statements, variables , comments and\par
+operators in PHP.\par
+1. Create a basic PHP arithmetic application that contain following:\par
+a. Write your Class, Name, Aim and other details in using HTML or PHP comment\par
+with today's date.\par
+b. Create a 2 variable local & global.\par
+c. Create one function as \ldblquote AirthOperation\rdblquote  and perform sum, subtraction, division,\par
+modulos & multiplication using local & global variables.\par
+d. Create another function as \ldblquote IncDecOperation\rdblquote  and perform pre / post increment\par
+and decrement on values of global variables.\par
+e. Create another function as \ldblquote stringconcat\rdblquote  and take 2 string values in variable and\par
+concatenate them in one string. Ex: $v1=\rdblquote Working\rdblquote  $v2=\rdblquote with Php\rdblquote  then $output\par
+= \ldblquote Working with Php\rdblquote\par
+f. Call function according to need and print various outputs.\par
+g. Also show the difference output with echo in single quotes & double quotes.\par
+h. Use a reference variable ($$) to assign a sum value to be used in any other\par
+operation.\par
+POINT TO NOTE: echo and print are more or less the same. They are both used to output data to\par
+the screen.\par
+The differences are small: echo has no return value while print has a return value of 1 so it can be used in\par
+expressions. echo can take multiple parameters (although such usage is rare) while print can take one\par
+argument. echo is marginally faster than print.\par
+The echo statement can be used with or without parentheses: echo or echo().\par
+Sarvajanik University\par
+PRACTICAL ASSIGNMENT\par
+SY-SSP-SEM3-2023 (Batch-C)\par
+Assignment - 2\par
+\par
+AIM : Learn to deal with arrays with functions in PHP.\par
+Date: 12-08-23\par
+Q1. create a transaction indexed array that has a \ldblquote balanceqty\rdblquote  as an element in it. Display the amount using a for\par
+and foreach loop.\par
+Example: array(200,5000,1000,50);\par
+Q2. create a transaction associated array(multidimensional) that has \ldblquote orderedqty\rdblquote  , \ldblquote availableqty\rdblquote  , \ldblquote balanceqty\rdblquote\par
+as a key and its orderqty value, availableqty value and balanceqty as value. Display all the elements in sorted\par
+order of the highest balance of a quantity.\par
+Example: array( \ldblquote Products1\rdblquote =>array(\par
+ "orderedqty"=>20,\par
+ "availableqty"=>8,\par
+ "balanceqty"=>12.\par
+ ),\par
+ \ldblquote Products2\rdblquote =>array(\par
+ "orderedqty"=>15,\par
+ "availableqty"=>17,\par
+ "balanceqty"=>2\par
+ ) );\par
+For sorting on \ldblquote KEY\rdblquote  use function : The ksort() function sorts an associative array in ascending order, according to\par
+the key.\par
+The krsort() function sorts an associative array in descending order, according to the key.\par
+SYNTAX : ksort(array);\par
+SYNTAX : krsort(array);\par
+For sorting on \ldblquote VALUE\rdblquote  use function: The asort() function sorts an associative array in ascending order, according\par
+to the value.\par
+Use the arsort() function to sort an associative array in descending order, according to the value.\par
+SYNTAX: asort(array);\par
+SYNTAX: arsort(array);\par
+Q3. above question-2 , remove the \ldblquote balanceqty\rdblquote  field value and calculate balanceqty value by deducting\par
+orderedqty from availableqty value and storing \ldblquote balanceqty\rdblquote  in a new array. Display the same new array\par
+with balance quantity.\par
+HINT Q3:\par
+$new_transactions = array();\par
+foreach( $transactions as $transaction ) \{\par
+ $new_transaction = $transaction;\par
+ $new_transaction[ "amount" ] = abs( $transaction[ "debit" ] -\par
+$transaction[ "credit" ] );\par
+ $new_transactions[] = $new_transaction;\par
+\}\par
+$transactions = $new_transactions;\par
+Assignment - 3\par
+AIM : Work with Forms and Database with OOP crud operations in PHP.\par
+Date:\par
+Q1. create an ProjectListing application using forms do the following:\par
+1. Create a login form and take input from the employee name and password. Before login\par
+success, check whether the employee name contains only \ldblquote character\rdblquote  or not and\par
+password length must be between \ldblquote 8\rdblquote  to \ldblquote 15\rdblquote . (perform validation).\par
+2. If input data is \ldblquote OK\rdblquote  then, redirect to another page \ldblquote Dashboard\rdblquote  and display Employee\par
+name (username) on that page using the \ldblquote POST\rdblquote  method.\par
+3. On the \ldblquote Dashboard\rdblquote  page, create a hyperlink \ldblquote Project_Details\rdblquote  , \ldblquote Project_Status\rdblquote ,\par
+\ldblquote Employee_Details\rdblquote .\par
+4. Create a database \ldblquote E-Project\rdblquote  with following tables : \ldblquote Project_details\rdblquote , \ldblquote Emp_details\rdblquote ,\par
+\ldblquote Emp_proj_details\rdblquote .\par
+a. Project_details table : ProjID (PK-autogenerate) , ProjType (values: webapp,\par
+mobileapp, desktopapp), ProjTitle, ProjBudget, ProjLastDate.\par
+b. Emp_details table: EmpNo (PK-autogenerate), EmpEmail, EmpType\par
+(projmanager or regemp) , EmpName, EmpcontactNo, EmpJoinDate,\par
+EmpWorkType (Remote or InComp).\par
+c. Emp_proj_details: EPKEY (PK-autogenerate-combination of character &\par
+number, Ex: EP1, EP2), ProjID (FK ), Status (Complete, Pending, Ongoing),\par
+EmpNo (FK), CompletionDate.\par
+5. While clicking on hyperlink \ldblquote Project_details\rdblquote  : create a page to add the details of the\par
+project with all fields and insert data to table project_details.\par
+6. Display all Project Details from its table.\par
+7. Note: kindly enter all data manually in the Emp_details table.\par
+8. While clicking on hyperlink \ldblquote Project_Status\rdblquote  : create a page to add employee project\par
+details with all fields in the table and insert the same.\par
+(note : load all project titles in dropdown from project_details table and then select one\par
+and insert the same in column projID in Emp_proj_details table. Do the same for EmpNo.)\par
+9. Display all data from the Emp_proj_details table.\par
+Assignment 4: In Continuation of Assignment-3\par
+1. On the \ldblquote Dashboard\rdblquote  page, create a hyperlink \ldblquote EmpProfile\rdblquote  and redirect to\par
+\ldblquote Profileview\rdblquote  page and fetch (display) employee basic information such as\par
+EmpName, EmpContactNo, EmpEmail-id, EmpWorkType and EmpType.\par
+2. Create a hyperlink or button (with radio) for editing an employee profile\par
+details(on view page). Load all profile information to controls on the next page.\par
+3. After editing profile information redirect to profile view page.\par
+4. Create a hyperlink or button (with checkbox) for record deletion from table.\par
+5. take an input of the employee photo on the \ldblquote profile view\rdblquote  page (hint: create\par
+a folder before image upload operation). If image upload is successful then display\par
+the message \ldblquote uploaded successfully\rdblquote . Display the employee photo on the\par
+\ldblquote Dashboard\rdblquote  page.\par
+Note: All operations must be implemented using the OOP concept only.\par
+Assignment - 5\par
+AIM : create a php program that handles strings by creating different\par
+functions in PHP.\par
+Date:\par
+1. Take a string of email-id of the user and extract only username from emailid. Display the same as output. (hint: use strstr function)\par
+2. Write a program that takes any string as input and generates a random\par
+password for that string. (hint: use substr and str_shuffle function). Display\par
+the random password as an output.\par
+3. Convert the string \ldblquote 1234567\rdblquote  into chunks \ldblquote 12 34 56 7\rdblquote  and display the\par
+output. (hint: use substr and chunk_split)\par
+4. Convert the first letter of all words to uppercase by taking any string as\par
+input. (hint: use ucwords function)\par
+5. Take an indexed array and find the shortest or longest length of string in the\par
+array. (hint: use array_map and strlen function).\par
+Assignment - 6\par
+AIM : Work with Website that handles operation using Ajax and mysql in PHP\par
+Q1. Create a search application from the Employee_Project_details table. Create a form which\par
+takes ProjTitle as input from the employee and selected ProjTitle will display all detailed\par
+information on the page using ajax with mysql.\par
+Example as below:\par
+Q2. Do add three more columns in table \ldblquote Emp details\rdblquote  (Assignment-3): EmpState , EmpCity and\par
+EmpArea. Kindly add a few records in the table directly using the \ldblquote insert\rdblquote  tab of mysql.\par
+Now based on EmpState selection from \ldblquote FORM input\rdblquote , do load EmpCity data from table and\par
+base on EmpCity selected ,load EmpArea table and display the selected data using Ajax.\par
+}
+ 
